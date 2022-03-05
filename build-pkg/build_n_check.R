@@ -1,23 +1,30 @@
-# TODO:   Working script for testing the package 'gisrepos'
+# TODO:   Working script for testing the package 'taxlist'
 # 
 # Author: Miguel Alvarez
 ################################################################################
 
 library(devtools)
-library(rmarkdown)
+library(styler)
 
-## source("data-raw/import-references.R")
+# Clean session
+rm(list = ls())
+
+# Clean folder
+unlink(file.path("build-pkg", list.files("build-pkg", ".tar.gz")))
+unlink(file.path("build-pkg", list.files("build-pkg", ".pdf")))
+
+# Write data
+## source("data-raw/create-data.R")
+
+# re-style scripts
+style_pkg()
+
+# write documentation
 document()
 
-# clean built package and manual
-## Folder <- tempdir()
-Folder <- "build-pkg"
-Files <- list.files(Folder, ".tar.gz|.pdf")
-unlink(file.path(Folder, Files))
-
-# Re-build package and manual
-pkg_loc <- build(path = Folder)
-build_manual(path = Folder)
-
-# common check
+# Build and check package
+pkg_loc <- build(path = "build-pkg", args = "--resave-data")
 check_built(path = pkg_loc)
+
+# write manual
+build_manual(path = "build-pkg")

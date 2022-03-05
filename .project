@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>urbotanist</name>
+	<name>template-r-package</name>
 	<comment>
-		R-Package with custom functions for the work with specimens and
-		database.
+		A GitHub template for an R package. Edit this description an the name.
 	</comment>
 	<projects>
 	</projects>

@@ -1,30 +1,17 @@
-Package: urbotanist
-Version: 0.0.1
+Package: <package name>
+Version: <package version>
 Encoding: UTF-8
-Title: Working with Herbarium Specimens
+Title: <edit>
 Authors@R:
 	person("Miguel", "Alvarez", email="kamapu78@gmail.com",
 		role=c("aut","cre"), comment=c(ORCID="0000-0003-1500-1834"))
 Depends:
-	R(>= 4.0.0),
-	taxlist
+	R(>= 4.0.0)
 Imports:
-    DBI,
-	methods,
-	RPostgreSQL,
-    sf,
-    vegtableDB,
-    yamlme
-Remotes:
-    github::kamapu/vegtableDB
 Suggests:
-	rmarkdown,
-	testthat
-Description:
-	Routines for the work with herbarium specimens.
+Description: <edit>
 LazyData: true
 Roxygen: list(markdown = TRUE)
-License: GPL (>= 2)
-URL: https://github.com/kamapu/urbotanist
-BugReports: https://github.com/kamapu/urbotanist/issues
-RoxygenNote: 7.1.2
+License: file LICENSE
+URL: https://github.com/kamapu/<edit>
+BugReports: https://github.com/kamapu/<edit>/issues

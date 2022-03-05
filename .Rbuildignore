@@ -1,7 +1,10 @@
+# eclipse files
 ^\.project$
+
+# Additional files and folders
+^build-pkg$
 ^data-raw$
 ^lab$
-^build-pkg$
 ^README\.Rmd$
 ^README\.md$
 ^\.github$
